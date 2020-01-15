@@ -1,13 +1,7 @@
 $(document).ready(function() {
-  $("#blanks form").submit(function() {
-    var blanks = ["person1", "person2", "animal", "exclamation", "verb", "noun"];
+  var age = parseInt(prompt("How old are you?"));
 
-    blanks.forEach(function(blank) {
-      var userInput = $("input." + blank).val();
-      console.log(userInput);
-      $("." + blank).text(userInput).val();      
-    });
-
-    $("#story").show();
-  });
+  if (age >= 21) {
+    $('#drinks').show();
+  }
 });
